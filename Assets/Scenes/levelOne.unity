@@ -231,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 911b2aca4190de843ba6fc029bf3734d, type: 3}
       propertyPath: m_TagString
-      value: Rock
+      value: Diamond
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 911b2aca4190de843ba6fc029bf3734d, type: 3}
       propertyPath: m_LocalScale.x
@@ -296,6 +296,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 911b2aca4190de843ba6fc029bf3734d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 592587039}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 911b2aca4190de843ba6fc029bf3734d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 592587040}
   m_SourcePrefab: {fileID: 100100000, guid: 911b2aca4190de843ba6fc029bf3734d, type: 3}
 --- !u!1 &279341569 stripped
 GameObject:
@@ -478,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1ec01ab42bc9842856cc9a35341d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Car: {fileID: 279341569}
+  Player: {fileID: 279341569}
 --- !u!1 &592587038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 911b2aca4190de843ba6fc029bf3734d, type: 3}
@@ -497,6 +500,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinSpeed: 50
+--- !u!135 &592587040
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592587038}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5999995
+  m_Center: {x: 0, y: -0.000000059604638, z: 4.2351647e-22}
 --- !u!198 &898622452 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 417761080263594739, guid: 7800b8f6b712bfe49bd663eeb3ebe1e4, type: 3}

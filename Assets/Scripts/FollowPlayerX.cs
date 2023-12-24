@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FollowPlayerX : MonoBehaviour
 {
-    public GameObject Car;
+    //make a variable called Player from GameObject
+    public GameObject Player;
+    //Moves on this axis in certain unitys
     private Vector3 offset =new Vector3(200, 0, 10);
 
     // Start is called before the first frame update
@@ -16,6 +18,7 @@ public class FollowPlayerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Car.transform.position + offset;
+        //Makes the camera move
+        transform.position = Player.transform.position + offset;
     }
 }

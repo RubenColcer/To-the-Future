@@ -18,7 +18,9 @@ public class PlayerControllerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    //fetches the Rigidbody component from the GameObject and sets to variable playerRb
     playerRb = GetComponent<Rigidbody>();
+    //fetches the AudioSource component and sets to variable playerAudio
     playerAudio = GetComponent<AudioSource>();
     }
 
@@ -35,7 +37,7 @@ public class PlayerControllerX : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        // if player collides with bomb, explode and set gameOver to true
+        // if player collides with Rock, runs the explode particle and should of ran an explosion noise but unable to fix
         if (other.gameObject.CompareTag("Rock"))
         {
             
@@ -43,8 +45,19 @@ public class PlayerControllerX : MonoBehaviour
             //playerAudio.PlayOneShot(explodeSound, 1.0f);
             
             Destroy(other.gameObject);
-           
+           // if Touched rock would take to to GameOver scene
             //SceneManager.LoadScene("GameOver");
+            
+        } 
+            // If player hits diamond takes you to Survuved scene
+        else if (other.gameObject.CompareTag("Diamond"))
+        {
+            
+            
+            
+            Destroy(other.gameObject);
+           
+            SceneManager.LoadScene("Survived");
             
         } 
     }
